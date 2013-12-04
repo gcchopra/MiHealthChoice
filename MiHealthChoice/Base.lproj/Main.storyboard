@@ -1,26 +1,190 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1at-hQ-pA1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y1v-xQ-LX6"/>
+                        <viewControllerLayoutGuide type="bottom" id="a6N-7A-Xnm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Please Enter Postcode" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-a8-dOR">
+                                <rect key="frame" x="35" y="79" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <action selector="postcodeTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Vtq-Zb-qKo"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8L-Sx-AX3">
+                                <rect key="frame" x="35" y="128" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_gp_highres_flat.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3vG-21-ham"/>
+                                    <segue destination="yg6-P0-aKR" kind="push" identifier="showResults" id="wGs-KL-VUV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAe-Oi-2jt">
+                                <rect key="frame" x="35" y="186" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_miu_wic_highres_flat.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S1c-pY-m39"/>
+                                    <segue destination="yg6-P0-aKR" kind="push" identifier="showResults" id="R2v-6t-XZO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-3L-WiS">
+                                <rect key="frame" x="35" y="244" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_pharmacy_highres_flat.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uDT-iK-SUA"/>
+                                    <segue destination="yg6-P0-aKR" kind="push" identifier="showResults" id="H5u-Nh-Jh6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-6J-pa8">
+                                <rect key="frame" x="35" y="305" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_optician_highres_flat.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DQT-o1-JnC"/>
+                                    <segue destination="yg6-P0-aKR" kind="push" identifier="showResults" id="zVq-wT-pp8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByU-al-cz1">
+                                <rect key="frame" x="35" y="365" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_dentist_highres_flat.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iFO-I3-jb5"/>
+                                    <segue destination="yg6-P0-aKR" kind="push" identifier="showResults" id="kuD-bg-Lsr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2B-6F-CVE">
+                                <rect key="frame" x="35" y="424" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_emergency_dept_highres_flat.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l2u-S3-KPh"/>
+                                    <segue destination="yg6-P0-aKR" kind="push" identifier="showResults" id="luQ-Yn-hb8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6hb-nG-wKc"/>
+                    <connections>
+                        <outlet property="btnDentist" destination="ByU-al-cz1" id="eAJ-rJ-Zwc"/>
+                        <outlet property="btnED" destination="L2B-6F-CVE" id="B4y-V0-5kb"/>
+                        <outlet property="btnGP" destination="P8L-Sx-AX3" id="mel-WP-Yka"/>
+                        <outlet property="btnMIU" destination="HAe-Oi-2jt" id="CWG-n3-BOf"/>
+                        <outlet property="btnOptician" destination="VK8-6J-pa8" id="8Ph-EK-enj"/>
+                        <outlet property="btnPharmacy" destination="Z1f-3L-WiS" id="lUU-3F-LNr"/>
+                        <outlet property="tbPostcode" destination="xB9-a8-dOR" id="ptM-vt-nkl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-161" y="-249"/>
+        </scene>
+        <!--Results Table View Controller-->
+        <scene sceneID="MMn-QV-Z4g">
+            <objects>
+                <tableViewController id="yg6-P0-aKR" customClass="ResultsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="WJe-yb-FVe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oiK-pr-Khc" detailTextLabel="IUx-2d-bkp" style="IBUITableViewCellStyleValue1" id="CKC-l3-vA4">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CKC-l3-vA4" id="0Rl-Xi-5OW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oiK-pr-Khc">
+                                            <rect key="frame" x="15" y="11" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUx-2d-bkp">
+                                            <rect key="frame" x="261" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yg6-P0-aKR" id="1pL-C4-TCf"/>
+                            <outlet property="delegate" destination="yg6-P0-aKR" id="VwN-fC-Khy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="uUp-bJ-bsX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwa-CU-mlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="-249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1De-12-gMJ">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="1at-hQ-pA1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage="title_bar.png" id="Z7Y-jm-Zyx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="HgT-sv-BqC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRt-eD-NPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="448"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_dentist_highres_flat.png" width="479" height="94"/>
+        <image name="button_emergency_dept_highres_flat.png" width="482" height="94"/>
+        <image name="button_gp_highres_flat.png" width="481" height="93"/>
+        <image name="button_miu_wic_highres_flat.png" width="478" height="94"/>
+        <image name="button_optician_highres_flat.png" width="480" height="95"/>
+        <image name="button_pharmacy_highres_flat.png" width="478" height="93"/>
+        <image name="title_bar.png" width="200" height="44"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="wGs-KL-VUV"/>
+    </inferredMetricsTieBreakers>
 </document>

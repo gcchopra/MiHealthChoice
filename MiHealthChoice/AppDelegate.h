@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  MiHealthChoice
+//  MiDosServiceFinder
 //
-//  Created by Girish Chopra on 03/12/2013.
+//  Created by Girish Chopra on 25/11/2013.
 //  Copyright (c) 2013 Intuiti. All rights reserved.
 //
 

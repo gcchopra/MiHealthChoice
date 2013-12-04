@@ -14,13 +14,30 @@
 		68B26973184E94EC003A52EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B26972184E94EC003A52EE /* main.m */; };
 		68B26977184E94EC003A52EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B26976184E94EC003A52EE /* AppDelegate.m */; };
 		68B2697A184E94EC003A52EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B26978184E94EC003A52EE /* Main.storyboard */; };
-		68B2697D184E94EC003A52EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B2697C184E94EC003A52EE /* ViewController.m */; };
+		68B2697D184E94EC003A52EE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B2697C184E94EC003A52EE /* MainViewController.m */; };
 		68B2697F184E94EC003A52EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B2697E184E94EC003A52EE /* Images.xcassets */; };
 		68B26986184E94EC003A52EE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B26985184E94EC003A52EE /* XCTest.framework */; };
 		68B26987184E94EC003A52EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B26966184E94EC003A52EE /* Foundation.framework */; };
 		68B26988184E94EC003A52EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B2696A184E94EC003A52EE /* UIKit.framework */; };
 		68B26990184E94EC003A52EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68B2698E184E94EC003A52EE /* InfoPlist.strings */; };
 		68B26992184E94EC003A52EE /* MiHealthChoiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B26991184E94EC003A52EE /* MiHealthChoiceTests.m */; };
+		68B269A0184E96E7003A52EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B2699C184E96E7003A52EE /* DetailViewController.m */; };
+		68B269A1184E96E7003A52EE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B2699D184E96E7003A52EE /* DetailViewController.xib */; };
+		68B269A2184E96E7003A52EE /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B2699F184E96E7003A52EE /* ResultsTableViewController.m */; };
+		68B269B1184E983F003A52EE /* button_dentist_highres_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269A5184E983F003A52EE /* button_dentist_highres_flat.png */; };
+		68B269B2184E983F003A52EE /* button_emergency_dept_highres_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269A6184E983F003A52EE /* button_emergency_dept_highres_flat.png */; };
+		68B269B3184E983F003A52EE /* button_gp_highres_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269A7184E983F003A52EE /* button_gp_highres_flat.png */; };
+		68B269B4184E983F003A52EE /* button_miu_wic_highres_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269A8184E983F003A52EE /* button_miu_wic_highres_flat.png */; };
+		68B269B5184E983F003A52EE /* button_optician_highres_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269A9184E983F003A52EE /* button_optician_highres_flat.png */; };
+		68B269B6184E983F003A52EE /* button_pharmacy_highres_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269AA184E983F003A52EE /* button_pharmacy_highres_flat.png */; };
+		68B269B7184E983F003A52EE /* launchimage_640x860_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269AB184E983F003A52EE /* launchimage_640x860_flat.png */; };
+		68B269B8184E983F003A52EE /* launchimage_640x1136_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269AC184E983F003A52EE /* launchimage_640x1136_flat.png */; };
+		68B269B9184E983F003A52EE /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269AD184E983F003A52EE /* settings_icon.png */; };
+		68B269BA184E983F003A52EE /* spotlight_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269AE184E983F003A52EE /* spotlight_icon.png */; };
+		68B269BB184E983F003A52EE /* title_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269AF184E983F003A52EE /* title_bar.png */; };
+		68B269BD184EB0D0003A52EE /* app_icon_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269BC184EB0D0003A52EE /* app_icon_80x80.png */; };
+		68B269BF184EB0D7003A52EE /* app_icon_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269BE184EB0D7003A52EE /* app_icon_120x120.png */; };
+		68B269C3184EB1D7003A52EE /* app_icon_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 68B269C2184EB1D7003A52EE /* app_icon_58x58.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +62,33 @@
 		68B26975184E94EC003A52EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68B26976184E94EC003A52EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		68B26979184E94EC003A52EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		68B2697B184E94EC003A52EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		68B2697C184E94EC003A52EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		68B2697B184E94EC003A52EE /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		68B2697C184E94EC003A52EE /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		68B2697E184E94EC003A52EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68B26984184E94EC003A52EE /* MiHealthChoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiHealthChoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B26985184E94EC003A52EE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		68B2698D184E94EC003A52EE /* MiHealthChoiceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiHealthChoiceTests-Info.plist"; sourceTree = "<group>"; };
 		68B2698F184E94EC003A52EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68B26991184E94EC003A52EE /* MiHealthChoiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiHealthChoiceTests.m; sourceTree = "<group>"; };
+		68B2699B184E96E7003A52EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		68B2699C184E96E7003A52EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		68B2699D184E96E7003A52EE /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		68B2699E184E96E7003A52EE /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		68B2699F184E96E7003A52EE /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
+		68B269A5184E983F003A52EE /* button_dentist_highres_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_dentist_highres_flat.png; path = ../../../Downloads/button_dentist_highres_flat.png; sourceTree = "<group>"; };
+		68B269A6184E983F003A52EE /* button_emergency_dept_highres_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_emergency_dept_highres_flat.png; path = ../../../Downloads/button_emergency_dept_highres_flat.png; sourceTree = "<group>"; };
+		68B269A7184E983F003A52EE /* button_gp_highres_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_gp_highres_flat.png; path = ../../../Downloads/button_gp_highres_flat.png; sourceTree = "<group>"; };
+		68B269A8184E983F003A52EE /* button_miu_wic_highres_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_miu_wic_highres_flat.png; path = ../../../Downloads/button_miu_wic_highres_flat.png; sourceTree = "<group>"; };
+		68B269A9184E983F003A52EE /* button_optician_highres_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_optician_highres_flat.png; path = ../../../Downloads/button_optician_highres_flat.png; sourceTree = "<group>"; };
+		68B269AA184E983F003A52EE /* button_pharmacy_highres_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_pharmacy_highres_flat.png; path = ../../../Downloads/button_pharmacy_highres_flat.png; sourceTree = "<group>"; };
+		68B269AB184E983F003A52EE /* launchimage_640x860_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchimage_640x860_flat.png; path = ../../../Downloads/launchimage_640x860_flat.png; sourceTree = "<group>"; };
+		68B269AC184E983F003A52EE /* launchimage_640x1136_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launchimage_640x1136_flat.png; path = ../../../Downloads/launchimage_640x1136_flat.png; sourceTree = "<group>"; };
+		68B269AD184E983F003A52EE /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_icon.png; path = ../../../Downloads/settings_icon.png; sourceTree = "<group>"; };
+		68B269AE184E983F003A52EE /* spotlight_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spotlight_icon.png; path = ../../../Downloads/spotlight_icon.png; sourceTree = "<group>"; };
+		68B269AF184E983F003A52EE /* title_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title_bar.png; path = ../../../Downloads/title_bar.png; sourceTree = "<group>"; };
+		68B269BC184EB0D0003A52EE /* app_icon_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_80x80.png; path = ../../../Downloads/app_icon_80x80.png; sourceTree = "<group>"; };
+		68B269BE184EB0D7003A52EE /* app_icon_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_120x120.png; path = ../../../Downloads/app_icon_120x120.png; sourceTree = "<group>"; };
+		68B269C2184EB1D7003A52EE /* app_icon_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_58x58.png; path = ../../../Downloads/app_icon_58x58.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +118,7 @@
 		68B2695A184E94EC003A52EE = {
 			isa = PBXGroup;
 			children = (
+				68B269A3184E9800003A52EE /* Images */,
 				68B2696C184E94EC003A52EE /* MiHealthChoice */,
 				68B2698B184E94EC003A52EE /* MiHealthChoiceTests */,
 				68B26965184E94EC003A52EE /* Frameworks */,
@@ -112,11 +149,16 @@
 		68B2696C184E94EC003A52EE /* MiHealthChoice */ = {
 			isa = PBXGroup;
 			children = (
+				68B2699B184E96E7003A52EE /* DetailViewController.h */,
+				68B2699C184E96E7003A52EE /* DetailViewController.m */,
+				68B2699D184E96E7003A52EE /* DetailViewController.xib */,
+				68B2699E184E96E7003A52EE /* ResultsTableViewController.h */,
+				68B2699F184E96E7003A52EE /* ResultsTableViewController.m */,
 				68B26975184E94EC003A52EE /* AppDelegate.h */,
 				68B26976184E94EC003A52EE /* AppDelegate.m */,
 				68B26978184E94EC003A52EE /* Main.storyboard */,
-				68B2697B184E94EC003A52EE /* ViewController.h */,
-				68B2697C184E94EC003A52EE /* ViewController.m */,
+				68B2697B184E94EC003A52EE /* MainViewController.h */,
+				68B2697C184E94EC003A52EE /* MainViewController.m */,
 				68B2697E184E94EC003A52EE /* Images.xcassets */,
 				68B2696D184E94EC003A52EE /* Supporting Files */,
 			);
@@ -150,6 +192,27 @@
 				68B2698E184E94EC003A52EE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68B269A3184E9800003A52EE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				68B269BC184EB0D0003A52EE /* app_icon_80x80.png */,
+				68B269BE184EB0D7003A52EE /* app_icon_120x120.png */,
+				68B269C2184EB1D7003A52EE /* app_icon_58x58.png */,
+				68B269A5184E983F003A52EE /* button_dentist_highres_flat.png */,
+				68B269A6184E983F003A52EE /* button_emergency_dept_highres_flat.png */,
+				68B269A7184E983F003A52EE /* button_gp_highres_flat.png */,
+				68B269A8184E983F003A52EE /* button_miu_wic_highres_flat.png */,
+				68B269A9184E983F003A52EE /* button_optician_highres_flat.png */,
+				68B269AA184E983F003A52EE /* button_pharmacy_highres_flat.png */,
+				68B269AB184E983F003A52EE /* launchimage_640x860_flat.png */,
+				68B269AC184E983F003A52EE /* launchimage_640x1136_flat.png */,
+				68B269AD184E983F003A52EE /* settings_icon.png */,
+				68B269AE184E983F003A52EE /* spotlight_icon.png */,
+				68B269AF184E983F003A52EE /* title_bar.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +262,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Intuiti;
 				TargetAttributes = {
+					68B26962184E94EC003A52EE = {
+						DevelopmentTeam = PDGJ55Y59F;
+					};
 					68B26983184E94EC003A52EE = {
 						TestTargetID = 68B26962184E94EC003A52EE;
 					};
@@ -229,8 +295,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B2697F184E94EC003A52EE /* Images.xcassets in Resources */,
+				68B269B4184E983F003A52EE /* button_miu_wic_highres_flat.png in Resources */,
+				68B269B1184E983F003A52EE /* button_dentist_highres_flat.png in Resources */,
 				68B26971184E94EC003A52EE /* InfoPlist.strings in Resources */,
+				68B269B2184E983F003A52EE /* button_emergency_dept_highres_flat.png in Resources */,
+				68B269BD184EB0D0003A52EE /* app_icon_80x80.png in Resources */,
+				68B269BF184EB0D7003A52EE /* app_icon_120x120.png in Resources */,
 				68B2697A184E94EC003A52EE /* Main.storyboard in Resources */,
+				68B269BB184E983F003A52EE /* title_bar.png in Resources */,
+				68B269B7184E983F003A52EE /* launchimage_640x860_flat.png in Resources */,
+				68B269A1184E96E7003A52EE /* DetailViewController.xib in Resources */,
+				68B269B6184E983F003A52EE /* button_pharmacy_highres_flat.png in Resources */,
+				68B269B8184E983F003A52EE /* launchimage_640x1136_flat.png in Resources */,
+				68B269B3184E983F003A52EE /* button_gp_highres_flat.png in Resources */,
+				68B269B9184E983F003A52EE /* settings_icon.png in Resources */,
+				68B269C3184EB1D7003A52EE /* app_icon_58x58.png in Resources */,
+				68B269B5184E983F003A52EE /* button_optician_highres_flat.png in Resources */,
+				68B269BA184E983F003A52EE /* spotlight_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B2697D184E94EC003A52EE /* ViewController.m in Sources */,
+				68B2697D184E94EC003A52EE /* MainViewController.m in Sources */,
 				68B26977184E94EC003A52EE /* AppDelegate.m in Sources */,
 				68B26973184E94EC003A52EE /* main.m in Sources */,
+				68B269A0184E96E7003A52EE /* DetailViewController.m in Sources */,
+				68B269A2184E96E7003A52EE /* ResultsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +461,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MiHealthChoice/MiHealthChoice-Prefix.pch";
 				INFOPLIST_FILE = "MiHealthChoice/MiHealthChoice-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +481,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MiHealthChoice/MiHealthChoice-Prefix.pch";
 				INFOPLIST_FILE = "MiHealthChoice/MiHealthChoice-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +557,7 @@
 				68B26997184E94EC003A52EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68B26998184E94EC003A52EE /* Build configuration list for PBXNativeTarget "MiHealthChoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +566,7 @@
 				68B2699A184E94EC003A52EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

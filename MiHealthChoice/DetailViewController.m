@@ -16,15 +16,14 @@
 @implementation DetailViewController
 @synthesize imageView, days;
 @synthesize details;
-@synthesize imageName;
-@synthesize address,phone, openingHours;
+@synthesize imageName, textViewDetails,textViewAddress, textViewName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        days = [[NSArray alloc] initWithObjects:@"Mon:",@"Tue: ",@"Wed:",@"Thu:",@"Fri:  ",@"Sat: ",@"Sun:",nil];
+        days = [[NSArray alloc] initWithObjects:@"Mon:",@"Tue:",@"Wed:",@"Thu:",@"Fri:",@"Sat:",@"Sun:",nil];
     }
     return self;
 }
@@ -32,29 +31,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_bar.png"]];
+    
     // Do any additional setup after loading the view from its nib.
     imageView.image = [UIImage	imageNamed:imageName];
-    [address sizeToFit];
-    address.numberOfLines = 0;
-    [phone sizeToFit];
-    phone.numberOfLines = 0;
-    [openingHours sizeToFit];
-    NSString * addressStr = [[details objectForKey:@"Address"] stringByReplacingOccurrencesOfString:@", " withString:@"\n"];
-    addressStr = [addressStr stringByAppendingString:@"\n"];
-    addressStr = [addressStr stringByAppendingString:[details objectForKey:@"Postcode"]];
-    address.text = addressStr;
-
-    NSString * phoneNo = [details objectForKey:@"Phone"];
-    if (phoneNo != (id)[NSNull null]) {
-        phone.text = phoneNo;
-    }
-    NSMutableString * oh = [[NSMutableString alloc] init];
+    
+    
+    
+    [textViewName sizeToFit];
+    [textViewAddress sizeToFit];
+    textViewName.text = [details objectForKey:@"Name"];
+    NSMutableString * address = [[NSMutableString alloc] initWithString:[[details objectForKey:@"Address"] stringByReplacingOccurrencesOfString:@", " withString:@"\n"]];
+    [address appendFormat:@"\n%@",[details objectForKey:@"Postcode"]];
+    textViewAddress.text = address;
+    NSMutableString * data = [[NSMutableString alloc] initWithFormat:@"Phone:  \t%@\n\n",[details objectForKey:@"Phone"]];
+    [data appendString:@"Opening Hours:\n"];
     NSInteger index = 0;
     for(NSString * str in [details objectForKey:@"OpeningHours"])
     {
-        [oh appendFormat:@"%@\t%@\n",days[index++],str];
+       [data appendFormat:@"    %@\t%@\n",days[index++],str];
     }
-    openingHours.text = oh;
+    textViewDetails.text = data;
 }
 
 - (void)didReceiveMemoryWarning

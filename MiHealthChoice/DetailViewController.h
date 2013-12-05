@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *textViewDetails;
+@property (weak, nonatomic) IBOutlet UITextView *textViewName;
+@property (weak, nonatomic) IBOutlet UITextView *textViewAddress;
 @property (nonatomic, strong) NSDictionary * details;
 @property (nonatomic, strong) IBOutlet UIImageView * imageView;
-@property (weak, nonatomic) IBOutlet UILabel *address;
-@property (weak, nonatomic) IBOutlet UILabel *phone;
-@property (weak, nonatomic) IBOutlet UILabel *openingHours;
 @property (nonatomic, strong) NSString * imageName;
 @end

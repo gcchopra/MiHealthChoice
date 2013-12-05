@@ -13,8 +13,9 @@
     NSString * postCode;
     NSString * pageTitle;
     NSString * serviceId;
-    NSMutableArray * serviceData;
+    NSArray * serviceData;
     UIActivityIndicatorView *activityIndicatorView;
+    Boolean showDetails;
 }
 
 //@property (nonatomic,retain) NSMutableArray * results;

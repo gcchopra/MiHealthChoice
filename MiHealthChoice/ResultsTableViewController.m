@@ -36,7 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:pageTitle];
+//    [self setTitle:pageTitle];
+    showDetails = true;
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title_bar.png"]];
+
     
     NSMutableString * str = [NSMutableString stringWithFormat:@"http://pubapp.midosweb.co.uk/MidosPubAppService.svc/"];
     
@@ -140,21 +143,17 @@
         UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:msg delegate: self cancelButtonTitle : @"Cancel" otherButtonTitles: nil];
         [alert show];
     } else {
-//        Boolean add = FALSE;
-//        NSDictionary * entry ;
-//        if ([serviceData count] > 0 && [[serviceData objectAtIndex:0] count] == 0
-//            && [[serviceData objectAtIndex:1] count] == 0) {
-//            NSArray * vals = [[NSArray alloc] initWithObjects: @"No results found. Please check postcode.",@"",@"",@"",nil];
-//            NSArray * keys =
-//            [[NSArray alloc] initWithObjects: @"Address",@"Postcode",@"Phone",@"OpeningHours",nil];
-//            entry = [[NSDictionary alloc] initWithObjects:vals forKeys:keys];
-//            
-//            add = true;
-//        }
-//        if(add) {
-//            NSArray * array = [[NSArray alloc] initWithObjects:entry, nil];
-//            [serviceData setObject:array atIndexedSubscript:0];
-//        }
+        if ([serviceData count] > 0 && [[serviceData objectAtIndex:0] count] == 0
+            && [[serviceData objectAtIndex:1] count] == 0) {
+            NSArray * vals = [[NSArray alloc] initWithObjects: @"No results found",@"",@"",@"",@"",nil];
+            NSArray * keys =
+            [[NSArray alloc] initWithObjects:@"Name", @"Address",@"Postcode",@"Phone",@"OpeningHours",nil];
+            NSDictionary * entry = [[NSDictionary alloc] initWithObjects:vals forKeys:keys];
+            NSArray * data = [[NSArray alloc] initWithObjects:entry, nil];
+            NSArray * sData = [[NSArray alloc] initWithObjects:data,data, nil];
+            serviceData = sData;
+            showDetails = false;
+        }
         [self.tableView reloadData];
     }
     [activityIndicatorView stopAnimating];
@@ -214,7 +213,7 @@
     }
     
     // Configure the cell...
-    
+    cell.textLabel.font = [UIFont systemFontOfSize:16.0];
     return cell;
 }
 
@@ -273,10 +272,12 @@
     
     detailViewController.details = [[serviceData objectAtIndex:[indexPath section]] objectAtIndex:[indexPath row]] ;
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    if(showDetails) {
+        // Push the view controller.
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
 }
- 
+
 
 
 

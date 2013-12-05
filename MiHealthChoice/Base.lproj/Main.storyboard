@@ -149,16 +149,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="uUp-bJ-bsX"/>
+                    <connections>
+                        <segue destination="uqR-Ye-hoG" kind="unwind" identifier="hideResults" unwindAction="prepareForSegue:sender:" id="g4i-NI-3aj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwa-CU-mlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uqR-Ye-hoG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="200" y="-249"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1De-12-gMJ">
             <objects>
-                <navigationController definesPresentationContext="YES" id="1at-hQ-pA1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage="title_bar.png" id="Z7Y-jm-Zyx">
+                <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="1at-hQ-pA1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="left" id="Z7Y-jm-Zyx">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -177,7 +181,6 @@
         <image name="button_miu_wic_highres_flat.png" width="478" height="94"/>
         <image name="button_optician_highres_flat.png" width="480" height="95"/>
         <image name="button_pharmacy_highres_flat.png" width="478" height="93"/>
-        <image name="title_bar.png" width="200" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
